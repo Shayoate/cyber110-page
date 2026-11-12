@@ -1,0 +1,52 @@
+# Correspond — business email study workspace
+
+A static website for GitHub Pages. Paste an email and optionally its original issue, then rate ten dimensions on a 1–5 scale. No API account, server, build process, or secret keys are required.
+
+## Publish on GitHub Pages
+
+1. Create a GitHub repository, or use an existing one.
+2. Upload `index.html`, `styles.css`, `app.js`, `rubric.js`, and `.nojekyll` to its root. Keep these files together. Do not upload confidential study emails.
+3. In **Settings → Pages → Build and deployment**, select **Deploy from a branch**, your branch (usually `main`), and **/ (root)**. Save.
+4. Open the Pages URL GitHub provides after deployment completes. Relative asset paths support both project and account Pages sites.
+
+To try locally, run `python3 -m http.server 8080` in this folder and open `http://localhost:8080`. Use HTTP localhost or HTTPS; opening `index.html` as a file will not reliably load ES modules or WebGPU.
+
+## Evaluation methods
+
+**On-device AI:** uses WebLLM 0.2.80 and `Qwen2.5-1.5B-Instruct-q4f16_1-MLC`. First use downloads approximately 1 GB of model assets; plan for about 2 GB of available GPU memory, with additional memory required for the context window. Requires WebGPU, typically recent desktop Chrome or Edge with a supported GPU. Speed, availability, and memory use vary. Model files are fetched from jsDelivr, Hugging Face, and MLC/GitHub-hosted assets and may be cached by the browser. Internet is needed to load uncached assets. First load can take several minutes. A browser or network restriction may prevent the download. The runtime is imported only when you click Evaluate in AI mode. Email and issue text are processed on your device and are not sent to an AI provider. The model is a small general-purpose model, not a validated research instrument.
+
+**Manual review:** works without WebGPU, model downloads, or an AI account. Choose Manual review, click Evaluate, open each dimension, and select a score and enter notes. Use this when AI is unavailable or for human coding. After site assets are loaded, manual review does not need a network connection. No offline installation/service worker is provided.
+
+On-device AI accepts at most 3,000 characters for the email and original issue combined to fit the model’s 4,096-token context window. Long or token-dense inputs can still exceed model limits; shorten them or use manual review. Manual review allows up to 8,000 email characters and 4,000 issue characters.
+
+**Try an example:** loads a sample with explicitly labeled, hand-written illustrative ratings. It never pretends to be a model evaluation.
+
+## Ratings and exports
+
+The dimensions are valid email, perceived effort, perceived AI use, confidence in that AI judgment, responsibility, specificity, preserving the relationship, respectfulness, disclosed stress, and addressing the issue. Open **Explore the rubric** for all five anchors for each dimension. The canonical definitions are in `rubric.js`.
+
+Scores are ordinal: 1 means very little and 5 means a great deal of the named dimension. A higher stress or AI-use score is not a better email. There is deliberately no total or average. `null` / N/A means insufficient information; it is distinct from 1.
+
+AI-use scores are uncertain perceptions, not detection results or probabilities. The model's confidence score is capped at 2 because this tool cannot verify provenance. An AI-generated score of 5 for perceived AI use is set to N/A for human review because it requires direct evidence. Human reviewers can change any score using the visible rubric. Do not use these judgments as proof of misconduct.
+
+Effort means visible care, not actual labor. Stress means explicitly disclosed stress, not an inferred mental state. Valid email means a plausible business response, not address validation, authenticity, or factual verification. Issue resolution should be N/A when neither context nor a stated issue is available; human review is needed to check this judgment.
+
+Every result has editable rationale notes and a human-review flag. Model evidence is displayed only if it is an exact substring of the email. This verifies quotation presence, not whether it supports the judgment. Model output is validated for all ten unique dimension IDs, integer scores 1–5 or null, and explanations. Invalid output gives an error and preserves the inputs; no heuristic fallback is disguised as AI.
+
+CSV and JSON exports contain study ID, timestamp (UTC ISO 8601), rubric version, method, model ID where applicable, all scores, notes, quoted evidence, and review flags. Full email and original issue text are excluded. Quotes and notes may still contain sensitive information: review exports before sharing. CSV fields are quoted and formula-like values are escaped for spreadsheet use. Export records before refreshing or closing the tab. Changing the inputs invalidates the displayed ratings, preventing accidental export against a different email.
+
+## Privacy and research limitations
+
+No analytics, cookies, local-storage email history, or backend. Inputs and results live in tab memory until cleared, refreshed, or closed. Browser model caches contain model files, not study records. Downloads, browser extensions, OS memory, and browser recovery are outside the app's control. Third-party fonts and model/runtime downloads disclose ordinary connection metadata to their hosts; they do not receive pasted email text from this app. To avoid remote fonts, remove the first `@import` line from `styles.css`; system fonts are already configured.
+
+Use de-identified inputs appropriate for your study protocol. Pilot and calibrate the rubric with independent human raters, check agreement and model bias, and record the model and rubric versions used. Scores from the local model have not been validated. Temperature 0 and a fixed seed reduce variation but do not guarantee identical scores across devices and runtime changes.
+
+## Files
+
+- `index.html`: responsive, accessible page structure.
+- `styles.css`: visual design and responsive layouts.
+- `app.js`: UI, local AI connection, manual review, exports.
+- `rubric.js`: rubric, scoring prompt, validation, CSV formatting.
+- `.nojekyll`: makes GitHub Pages serve the static files directly.
+
+No deployment was performed and no real study emails were evaluated during development. See `VALIDATION.md` for checks and testing limits.

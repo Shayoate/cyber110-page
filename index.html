@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A private, browser-based workspace for rating business study emails.">
+  <title>Correspond — Email study workspace</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="./"><span class="brand-icon" aria-hidden="true">c.</span>correspond<span class="brand-divider"></span><span class="workspace-name">Research workspace</span></a><span class="privacy"><span></span> Private by design</span></header>
+  <main>
+    <div class="intro"><div><p class="eyebrow">BUSINESS COMMUNICATION STUDY</p><h1>A closer read.</h1><p class="lede">Understand the way an email responds.<br>Ten dimensions. One consistent rubric.</p></div><button id="rubric-open" class="button secondary">Explore the rubric <span aria-hidden="true">↗</span></button></div>
+    <div class="workspace">
+      <section class="panel input-panel" aria-labelledby="input-title">
+        <div class="panel-heading"><div><p class="step">01 / INPUT</p><h2 id="input-title">The email</h2></div><button id="sample" class="text-button">Try an example <span aria-hidden="true">↗</span></button></div>
+        <label for="study-id">Study ID <span class="optional">optional · avoid names</span></label><input id="study-id" maxlength="100" placeholder="e.g. Participant 024">
+        <div class="label-row"><label for="email">Email text</label><span id="word-count">0 words</span></div>
+        <textarea id="email" maxlength="8000" placeholder="Paste the email here, including the greeting and sign-off if available…" spellcheck="false"></textarea>
+        <details class="context"><summary>Add the original issue <span class="optional">optional</span></summary><label class="sr-only" for="context">Original issue or request</label><textarea id="context" maxlength="4000" placeholder="What problem was the writer responding to? This helps assess whether the email addresses it."></textarea></details>
+        <div class="mode-section"><label for="mode">Evaluation method</label><select id="mode"><option value="local">On-device AI</option><option value="manual">Manual review</option></select><p id="mode-help">Runs locally with WebGPU. First use downloads a model (about 1 GB); allow around 2 GB of GPU memory. No account or API key.</p></div>
+        <div class="action-row"><button id="analyze" class="button primary"><span aria-hidden="true">✧</span> Evaluate email <span aria-hidden="true">→</span></button><button id="clear" class="text-button">Clear</button></div>
+        <div id="status" class="status" role="status" aria-live="polite">Your email stays in this tab. Model files may be cached by your browser.</div><progress id="progress" hidden max="1" value="0" aria-label="Model loading"></progress>
+      </section>
+      <section class="panel results-panel" aria-labelledby="results-title">
+        <div class="panel-heading"><div><p class="step">02 / EVALUATION</p><h2 id="results-title">The reading</h2></div><span id="result-badge" class="badge">AWAITING INPUT</span></div>
+        <div class="scale-key"><span>RATING SCALE</span><span>1 <i></i> 5 <b>Little → A lot</b></span></div>
+        <div id="empty-state" class="empty-state"><div class="empty-illustration" aria-hidden="true"><div class="paper"><i></i><i></i><i></i><div class="paper-bars"><b></b><b></b><b></b><b></b><b></b></div></div><span>✧</span></div><h3>Every word tells you something.</h3><p>Paste an email to explore its tone,<br>specificity, ownership, and more.</p><div class="empty-tags"><span>10 dimensions</span><span>Evidence-based notes</span></div></div>
+        <div id="results" hidden><p id="result-summary" class="result-summary"></p><p class="review-hint">Review each score. Open a dimension for evidence and editing.</p><div id="rating-list"></div><div class="export-row"><button id="export-csv" class="button secondary">Download CSV ↓</button><button id="export-json" class="text-button">JSON ↓</button></div><p class="export-note">Exports contain ratings, notes, and any quoted evidence. Full email text is excluded.</p></div>
+        <div class="results-footnote"><span aria-hidden="true">ⓘ</span><p>AI authorship cannot be reliably determined from text alone. Scores describe perceptions, not proof or a calibrated probability.</p></div>
+      </section>
+    </div>
+    <section class="principles"><div><span>01</span><div><h3>One shared scale</h3><p>Explicit anchors keep all ten dimensions consistent.</p></div></div><div><span>02</span><div><h3>Evidence, alongside scores</h3><p>Review the words behind each assessment.</p></div></div><div><span>03</span><div><h3>Built for your study</h3><p>Revise judgments and export a reviewable record.</p></div></div></section>
+    <footer><span>correspond <span class="footer-dot">/</span> A little more understanding.</span><span>Rubric v1.0 · No analytics · No email storage</span></footer>
+  </main>
+  <dialog id="rubric-dialog"><div class="dialog-head"><div><p class="eyebrow">RUBRIC V1.0</p><h2>What each score means</h2></div><button id="rubric-close" class="text-button" aria-label="Close rubric">Close ✕</button></div><p>Rate only what is observable in the text. Use “Not enough information” when evidence is insufficient. Higher scores mean more of the named dimension, including stress and perceived AI use; there is no combined quality score.</p><div id="rubric-content"></div><p class="small-note">These are study judgments, not validated measurements. Calibrate with human raters before research use. “Valid email” means a plausible business email response, not an address or authenticity check. Disclosed stress describes stated stress, not inferred mental health.</p></dialog>
+</body>
+</html>
