@@ -1,0 +1,50 @@
+LITTLE ACRE
+A cute point-and-click farming game for GitHub Pages.
+
+FILES
+index.html  - Page structure and instructions
+style.css   - All styles, including mobile layouts
+script.js   - All game logic and localStorage saving
+farm.svg    - Original farm illustration (keep beside index.html)
+
+HOW TO PLAY
+Choose a seed, then click an empty plot to plant it.
+Select Water (or press 2), then click the new plant.
+Carrots grow in 20 seconds, tomatoes in 40, strawberries in 60.
+Select Harvest (or press 3) and click a sparkling, ready crop.
+Sell your basket to earn coins for more seeds.
+Harvest 5 crops to receive a one-time 20 coin reward.
+Press 1 to return to planting. Click the chicken for a hello!
+
+TECHNOLOGY
+Uses HTML, CSS, JavaScript, and localStorage.
+CSS lives in style.css. JavaScript lives in script.js.
+No build tools, accounts, API keys, or backend are needed.
+Google Fonts is optional; built-in fonts are used when offline.
+
+SAVED PROGRESS
+Coins, all plots, growth timestamps, basket contents, day, and harvest
+reward progress save automatically in this browser using localStorage.
+Watered crops keep growing while you are away.
+Saves are per browser and website address, and do not sync across devices.
+If browser storage is unavailable the game still works and shows a notice.
+Malformed saved data is backed up under little-acre-farm-v1-backup
+before a new farm is started.
+
+GITHUB PAGES
+1. Create a GitHub repository (or use your existing website repository).
+2. Put index.html, style.css, script.js, and farm.svg together at its root.
+3. In the repository, open Settings > Pages.
+4. Under Build and deployment, choose Deploy from a branch.
+5. Select your main branch and / (root), then Save.
+6. After deployment completes, open the address shown in Settings > Pages.
+All asset paths are relative, so repository project URLs work too.
+
+LOCAL PREVIEW
+Open index.html directly, or for a consistent localStorage origin, serve it:
+  python -m http.server 8000
+Then visit http://localhost:8000 in your browser.
+
+VERIFIED
+Chromium desktop and mobile layout, complete farming loop, save/reload,
+offline crop growth, one-time reward, help dialog, and corrupt-save recovery.

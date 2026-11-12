@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6ed">
+  <meta name="description" content="A happy little place to plant, grow, and take things slow. A free cozy farming game.">
+  <title>Little Acre — your happy little farm</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E🌱%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Little Acre home"><span class="brand-icon">✿</span> little acre<span class="brand-dot">.</span></a>
+    <nav aria-label="Main navigation"><button class="nav-button active" data-view="farm">My farm</button><button class="nav-button" data-view="market">Farm stand <span class="nav-dot"></span></button></nav>
+    <button class="help-button" id="help-open"><span>?</span> How to play</button>
+  </header>
+  <main>
+    <section class="page-heading"><div><div class="eyebrow">A LITTLE DIRT. A LOT OF JOY.</div><h1>Life’s sweeter on the farm.</h1><p>Plant something good. Watch a little happiness grow.</p></div><div class="weather"><span class="sun-icon">☀</span><div><strong>A lovely day</strong><span>Always a good time to grow</span></div></div></section>
+    <div class="game-layout">
+      <section class="farm-panel" aria-label="Your farm">
+        <div class="farm-topbar"><div><span class="live-dot"></span> <strong>Your little acre</strong><span class="season">Spring, day <span id="day">1</span></span></div><div class="balance"><span class="coin">✦</span><strong id="coins">40</strong><span>coins</span></div></div>
+        <div class="landscape" id="landscape">
+          <img class="farm-art" src="farm.svg" alt="A sunny meadow with a little red barn, apple trees, and a duck pond" draggable="false">
+          <div class="scene-label">GROWN WITH A LITTLE LOVE</div>
+          <div class="plot-grid" id="plots" aria-label="Crop plots"></div>
+          <div class="farm-sign">little acre <span>est. today ♡</span></div>
+          <button class="chicken" id="chicken" aria-label="Say hello to the chicken">🐓</button>
+          <div class="scene-caption"><span>✦</span> A slower pace. A happier place.</div>
+          <div class="floating-message" id="floating-message" aria-live="polite"></div>
+        </div>
+        <div class="toolbox"><div class="tool-label">A LITTLE<br><strong>elbow grease</strong></div><div class="tool-buttons" role="group" aria-label="Farm tools"><button class="tool active" data-tool="plant"><span>🌱</span><strong>Plant</strong><kbd>1</kbd></button><button class="tool" data-tool="water"><span>💧</span><strong>Water</strong><kbd>2</kbd></button><button class="tool" data-tool="harvest"><span>🧺</span><strong>Harvest</strong><kbd>3</kbd></button></div><div class="tool-hint" id="tool-hint">Pick a seed, then click<br>an empty patch.</div></div>
+        <div class="farm-status"><span id="save-status">✓ Your farm is saved automatically</span><button id="sound-toggle" aria-pressed="false">♫ Sound off</button></div>
+      </section>
+      <aside>
+        <section class="card seed-card" id="seed-card"><div class="card-heading"><h2>The seed shed</h2><span>🌾</span></div><p>Little seeds, big possibilities.</p><div id="seed-list"></div><div class="seed-note">♡ One seed. A little water. That’s all.</div></section>
+        <section class="card basket-card"><div class="card-heading"><h2>Your basket</h2><span>🧺</span></div><div id="basket"></div><button class="sell-button" id="sell-all">Sell harvest <span id="sell-value">+0 ✦</span></button><div class="basket-note">Fresh from your farm to the neighborhood.</div></section>
+        <section class="goal-card"><span class="goal-icon">✧</span><div><h3>A little goal</h3><p id="goal-text">Harvest your first 5 crops</p><div class="progress-track"><div id="goal-progress"></div></div><span id="goal-count">0 / 5 harvested · reward: 20 coins</span></div></section>
+      </aside>
+    </div>
+    <footer><span>Made for the joy of growing.</span><span>Take your time. Your little acre will be here. <span class="footer-flower">✿</span></span></footer>
+  </main>
+  <dialog id="help-dialog"><button class="dialog-close" id="help-close" aria-label="Close instructions">×</button><span class="dialog-flower">🌱</span><h2>Welcome to your little acre.</h2><p>No rush. No weeds. Just a little growing.</p><ol><li><strong>Plant.</strong> Pick a seed from the shed, then click an empty patch. Seeds cost coins.</li><li><strong>Water.</strong> Select the water drop and click your planted crops. Each crop needs watering only once.</li><li><strong>Harvest.</strong> When a crop sparkles, use the basket to pick it.</li><li><strong>Sell.</strong> Sell your harvest to buy more seeds!</li></ol><p class="help-footnote">Use keys 1, 2, and 3 to switch tools. Your farm saves on this browser and keeps growing while you’re away.</p><button class="primary-button" id="start-growing">Let’s grow something</button></dialog>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
