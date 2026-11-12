@@ -1,2 +1,409 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap');
-:root{--paper:#f7f6ee;--ink:#304b37;--muted:#899080;--green:#416b44;--line:#e6e6da;--serif:'Fraunces',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #bd8f37;outline-offset:4px}button{color:inherit}button:disabled{cursor:default;opacity:.55}.site-header{max-width:1320px;margin:auto;height:98px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding:0 12px}.brand{font-family:var(--serif);font-weight:600;font-size:30px;text-decoration:none;color:var(--ink);letter-spacing:-1.5px}.brand-icon{display:inline-block;color:#6f8a49;font-size:41px;vertical-align:-3px;margin-right:10px}.brand-dot{color:#b68f43}.site-header nav{display:flex;gap:12px;margin-left:-75px}.nav-button{border:0;background:transparent;padding:11px 20px;font-size:13px;color:#7d8576;border-radius:25px}.nav-button.active{background:#e7ebdd;color:#38533b;font-weight:700}.nav-dot{display:inline-block;background:#bc9a5f;width:5px;height:5px;border-radius:50%;margin-left:5px;vertical-align:2px}.help-button{border:0;background:none;font-size:12px;display:flex;gap:8px;align-items:center}.help-button span{border:1px solid #9aa28d;border-radius:50%;width:17px;height:17px;font-size:11px}main{max-width:1260px;margin:auto;padding:0 20px}.page-heading{display:flex;align-items:center;justify-content:space-between;padding:43px 0 32px}.eyebrow{font-size:10px;letter-spacing:2.1px;color:#879075;font-weight:700}h1{font-family:var(--serif);font-weight:500;font-size:38px;letter-spacing:-1.3px;margin:10px 0 8px}.page-heading p{color:#8b9183;margin:0;font-size:13px}.weather{display:flex;gap:14px;align-items:center;margin-right:6px}.sun-icon{color:#d8af52;font-size:40px}.weather strong,.weather span:not(.sun-icon){display:block}.weather strong{font-size:12px;margin-bottom:6px;font-weight:500}.weather div span{font-size:10px;color:#969c8c}.game-layout{display:grid;grid-template-columns:minmax(0,1fr) 282px;gap:24px}.farm-panel{min-width:0}.farm-topbar{height:65px;background:#fffef8;border:1px solid var(--line);border-bottom:0;border-radius:15px 15px 0 0;display:flex;align-items:center;justify-content:space-between;padding:0 24px}.farm-topbar>div:first-child{display:flex;align-items:center;gap:9px}.farm-topbar strong{font-size:13px;font-weight:600}.live-dot{width:7px;height:7px;background:#84a165;border-radius:50%}.season{color:#a0a38f;border-left:1px solid #e5e7db;margin-left:7px;padding-left:14px;font-size:10px}.balance{display:flex;align-items:center;gap:7px;border:1px solid #eee7cf;background:#faf6e7;border-radius:22px;padding:7px 12px}.balance strong{font-size:16px;color:#76633d}.balance>span:last-child{font-size:10px;color:#9c8c66}.coin{display:inline-grid;place-items:center;background:#edc666;color:#ac7e24;border:2px solid #ddb65a;width:20px;height:20px;border-radius:50%;font-size:13px}.landscape{position:relative;aspect-ratio:1.55;overflow:hidden;background:#d4e3a9;isolation:isolate}.farm-art{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;pointer-events:none}.scene-label{position:absolute;top:22px;width:100%;text-align:center;font-size:8px;font-weight:700;letter-spacing:2.3px;color:#688052;opacity:.8}.plot-grid{position:absolute;left:29.6%;top:33%;width:46%;height:43%;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(3,1fr);gap:6px;transform:rotate(-8deg) skewX(7deg)}.plot{position:relative;border:0;border-radius:8px;background:repeating-linear-gradient(0deg,#97704c 0px,#97704c 3px,#a07b53 3px,#a07b53 12px);box-shadow:0 5px 0 #7f5d40,inset 0 0 0 3px #b18b60;transition:filter .15s,translate .15s;display:grid;place-items:center;padding:0;min-height:0}.plot:hover{filter:brightness(1.1);translate:0 -3px}.plot.watered{background:repeating-linear-gradient(0deg,#765d45 0px,#765d45 3px,#86674a 3px,#86674a 12px);box-shadow:0 5px 0 #6d513c,inset 0 0 0 3px #987754}.plot.ready{box-shadow:0 5px 0 #7f5d40,inset 0 0 0 2px #dbc377}.plot .crop{font-size:clamp(24px,3.2vw,45px);filter:drop-shadow(0 3px 1px #4b50222b);transform:skewX(-7deg) rotate(8deg);transition:scale .2s;line-height:1}.plot.ready:hover .crop{scale:1.15}.plot .empty-marker{font-size:19px;color:#c9a77a;opacity:.5}.plot .plot-badge{position:absolute;right:3px;top:1px;font-size:12px;transform:skewX(-7deg) rotate(8deg)}.plot .grow-bar{position:absolute;bottom:6px;left:15%;width:70%;height:3px;background:#594c3850;border-radius:2px;overflow:hidden}.grow-bar span{display:block;height:100%;background:#c2d58a}.farm-sign{position:absolute;left:9%;bottom:22%;background:#b98d58;box-shadow:0 3px 0 #8b6a44;border-radius:4px;padding:8px 12px;transform:rotate(-7deg);font-family:var(--serif);color:#fff4cc;font-size:clamp(11px,1.2vw,17px);text-align:center}.farm-sign:after{content:'';position:absolute;top:100%;height:18px;width:6px;background:#987343;left:50%;z-index:-1}.farm-sign span{display:block;font:7px var(--sans);letter-spacing:1px;margin-top:3px}.chicken{position:absolute;left:21%;bottom:12%;font-size:32px;background:none;border:0;transition:transform .2s}.chicken:hover{transform:rotate(-12deg)}.scene-caption{position:absolute;bottom:18px;left:0;width:100%;text-align:center;font-family:var(--serif);font-style:italic;font-size:12px;color:#607c4b}.scene-caption span{color:#9ba65d;margin-right:5px}.toolbox{display:flex;align-items:center;justify-content:space-between;padding:15px 23px;background:#fffef8;border:1px solid var(--line);border-radius:0 0 15px 15px;gap:12px;min-height:97px}.tool-label{font-size:8px;line-height:1.7;letter-spacing:1.4px;color:#8d947c}.tool-label strong{font-family:var(--serif);font-size:14px;font-weight:400;letter-spacing:0;color:#516346}.tool-buttons{display:flex;gap:8px}.tool{position:relative;width:81px;border:1px solid #e6e8da;border-radius:10px;background:#f8f8f0;display:flex;flex-direction:column;align-items:center;padding:7px 12px 8px;gap:4px}.tool.active{background:#eaf0dc;border-color:#9aaf78;box-shadow:0 0 0 1px #9aaf7822}.tool>span{font-size:23px}.tool strong{font-size:10px;font-weight:500}.tool kbd{position:absolute;top:5px;right:6px;font-size:8px;opacity:.45;font-family:var(--sans)}.tool-hint{font-size:10px;line-height:1.7;color:#909783;width:124px}.farm-status{display:flex;justify-content:space-between;margin:15px 3px;font-size:9px;color:#949b89}.farm-status button{border:0;background:none;font-size:10px;color:#8d957e;padding:0}aside{display:flex;flex-direction:column;gap:16px}.card{border:1px solid var(--line);border-radius:14px;background:#fffef8;padding:20px}.card-heading{display:flex;justify-content:space-between;align-items:center}.card-heading h2{font-family:var(--serif);font-size:20px;font-weight:500;margin:0}.card-heading>span{font-size:20px}.card>p{font-size:10px;color:#969a8a;margin:6px 0 18px}.seed-option{display:flex;align-items:center;gap:10px;padding:12px 10px;width:100%;border:1px solid transparent;background:none;text-align:left;border-radius:9px;margin-bottom:6px;position:relative}.seed-option.selected{border-color:#b9c797;background:#f0f3e5}.seed-icon{font-size:29px;width:36px;text-align:center}.seed-description{flex:1}.seed-description strong{font-size:12px;font-weight:500;display:block}.seed-description small{display:block;font-size:9px;color:#929882;margin-top:5px}.seed-price{font-size:11px;color:#8c7850}.seed-price span{color:#d1a447}.seed-note{text-align:center;border-top:1px dashed #dedfcf;padding-top:16px;margin-top:9px;font-size:9px;color:#9ca389}.basket-card{padding-bottom:15px}#basket{margin:16px 0 13px;display:flex;justify-content:space-around;gap:7px}.basket-item{display:flex;align-items:center;gap:5px;font-size:11px;color:#8c927e}.basket-item span{font-size:22px}.sell-button{width:100%;padding:12px 14px;border:0;background:#466e46;border-radius:8px;color:#fff9e9;font-size:11px;text-align:left;display:flex;justify-content:space-between;align-items:center;transition:background .2s}.sell-button:hover:enabled{background:#365d39}.sell-button span{font-size:10px;color:#e8ebc5}.basket-note{font-size:8px;text-align:center;color:#a0a590;margin-top:12px}.goal-card{display:flex;gap:12px;background:#edeee1;border-radius:12px;padding:17px 18px}.goal-icon{font-size:25px;color:#9c9d64}.goal-card>div{flex:1}.goal-card h3{font:500 15px var(--serif);margin:0 0 6px}.goal-card p{font-size:10px;margin:0;color:#7e886e}.progress-track{height:5px;background:#dce0cc;border-radius:10px;margin:12px 0 7px;overflow:hidden}#goal-progress{height:100%;background:#95aa71;transition:width .3s}.goal-card #goal-count{font-size:8px;color:#929b80}footer{display:flex;justify-content:space-between;border-top:1px solid var(--line);margin:22px 0 0;padding:21px 0;font-size:10px;color:#969d88}.footer-flower{font-size:20px;vertical-align:-2px;margin-left:7px;color:#8c9d71}.toast{position:fixed;bottom:30px;left:50%;transform:translate(-50%,20px);padding:13px 22px;background:#34543c;color:#fff8e6;border-radius:12px;box-shadow:0 5px 25px #243c2920;opacity:0;transition:opacity .2s,transform .2s;pointer-events:none;font-size:12px;z-index:10;max-width:90vw;text-align:center}.toast.visible{opacity:1;transform:translate(-50%,0)}.floating-message{position:absolute;top:22%;left:50%;translate:-50% 0;background:#fffce8;padding:8px 15px;border-radius:15px;font-size:11px;box-shadow:0 3px 10px #485f3020;opacity:0;pointer-events:none;transition:opacity .2s;white-space:nowrap}.floating-message.visible{opacity:1}dialog{border:1px solid #dbe1cf;border-radius:22px;padding:36px;max-width:450px;width:calc(100% - 32px);color:var(--ink);background:#fffdf4;box-shadow:0 20px 80px #20332030}dialog::backdrop{background:#2d463958;backdrop-filter:blur(4px)}.dialog-close{position:absolute;right:15px;top:10px;background:none;border:0;font-size:26px}.dialog-flower{font-size:36px}dialog h2{font:500 27px var(--serif);margin:13px 0}dialog p{font-size:12px;line-height:1.7;color:#8a947d}dialog ol{padding-left:19px;font-size:12px;line-height:1.8}dialog li{padding-bottom:9px}.help-footnote{background:#eff2e4;padding:12px;border-radius:8px}.primary-button{background:#466e46;color:#fff9e9;border:0;padding:12px 18px;border-radius:8px;width:100%;font-size:12px}.market-highlight{animation:highlight 1.2s ease}@keyframes highlight{50%{box-shadow:0 0 0 5px #d3dca3}}@media(min-width:1500px){main{padding-top:15px}.page-heading{padding-top:50px}}@media(max-width:1000px){.site-header{margin:0 25px}.game-layout{grid-template-columns:minmax(0,1fr) 245px;gap:17px}.card{padding:16px}.toolbox{padding:12px}.tool-label{display:none}.tool-hint{width:105px}.tool{width:65px}.season{display:none}.page-heading h1{font-size:32px}.plot-grid{gap:5px}.plot .crop{font-size:30px}.farm-sign{padding:6px 8px}}@media(max-width:740px){.site-header{height:78px;margin:0 18px;padding:0}.brand{font-size:25px}.brand-icon{font-size:32px;margin-right:5px}.site-header nav{margin:0;gap:0}.nav-button{font-size:10px;padding:9px 11px}.help-button{font-size:0;gap:0}.help-button span{font-size:12px}.page-heading{padding:29px 0 24px}.page-heading h1{font-size:29px}.page-heading p{font-size:11px}.weather{display:none}main{padding:0 16px}.game-layout{grid-template-columns:1fr;gap:12px}aside{display:grid;grid-template-columns:1fr 1fr;align-items:start;gap:12px}.goal-card{grid-column:1/-1}.farm-topbar{height:53px;padding:0 16px}.season{display:inline;font-size:9px}.plot .crop{font-size:clamp(24px,6vw,42px)}.tool-label{display:block}.tool-hint{width:104px}.tool{width:66px}.toolbox{padding:12px 16px}.landscape{aspect-ratio:1.4}.scene-label{font-size:7px;top:16px}.scene-caption{font-size:10px;bottom:13px}.farm-sign{font-size:12px}.farm-status{margin-bottom:4px}.card{padding:15px}.card-heading h2{font-size:18px}.card-heading>span{font-size:17px}.seed-option{gap:6px;padding:10px 5px}.seed-icon{width:27px;font-size:25px}.seed-description strong{font-size:11px}.seed-description small{font-size:8px}.seed-price{font-size:10px}.seed-note{font-size:8px}.basket-note{line-height:1.6}.basket-item{flex-direction:column}footer{font-size:8px;gap:15px}.footer-flower{font-size:16px}}@media(max-width:390px){.tool-label{display:none}.toolbox{gap:8px}.tool-buttons{gap:5px}.tool-hint{font-size:9px}.season{display:none}.card-heading h2{font-size:16px}.seed-option{gap:3px}.seed-price{font-size:9px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/*
+READING THIS FILE
+CSS means Cascading Style Sheets: rules controlling the page appearance.
+A comment between slash-star and star-slash is a note; the browser ignores it.
+Each rule has a selector (which elements to style) followed by declarations in braces.
+A declaration has a property (what to change), a colon, a value, and a semicolon.
+For example, color changes text color; background changes what is behind the text.
+A selector beginning with . matches an HTML class; one beginning with # matches a unique id.
+A plain word such as body matches that HTML tag. A comma applies a rule to several selectors.
+A space selects a nested element; > selects a direct child, one level inside its parent.
+A parent is an element containing another; the contained element is its child.
+A pseudo-class, written with :, selects a state or relationship: :hover is under the pointer,
+:disabled is unavailable, :enabled is available, :first-child and :last-child choose positions.
+:not(...) excludes matching elements. :focus-visible marks keyboard focus, the control ready for a key action.
+A pseudo-element, such as ::backdrop or :after, styles a browser-drawn extra part.
+px means CSS pixels, a layout unit; % is relative to the relevant container or value;
+vw and vh are one hundredth of the viewport width and height. The viewport is the visible browser area.
+An fr is a share of leftover space in a grid. s and ms measure seconds and milliseconds.
+Hexadecimal colors begin with # and describe red, green, and blue; extra final digits add transparency.
+Transparency controls how much of the background shows through. opacity controls whole-element visibility.
+margin is space outside an element; padding is space inside its border; gap separates layout items.
+A border outlines a box, border-radius rounds corners, and box-shadow adds a drawn shadow.
+width and height size a box; min/max values limit its size. aspect-ratio relates width to height.
+The cascade resolves overlapping rules; later equally specific rules can override earlier ones.
+An override changes a setting for a narrower situation while leaving other settings in place.
+The @import below loads optional Google fonts, sets of letter shapes. Fallback fonts are
+alternatives used if a preferred font cannot load; the game still works without that download.
+*/@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap');
+/*
+SHARED COLORS AND FONTS: :root selects the document root. Names starting with -- are custom properties, reusable settings. var(...) reads a setting wherever it is needed. A font family is an ordered choice of fonts; serif has letter finishing strokes, while sans-serif does not.
+*/:root{--paper:#f7f6ee;--ink:#304b37;--muted:#899080;--green:#416b44;--line:#e6e6da;--serif:'Fraunces',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif}/*
+BASE BOX SIZES: * matches every element. border-box makes width and height include padding and borders, making measurements easier to predict.
+*/*{box-sizing:border-box}/*
+PAGE DEFAULTS: remove the browser default outer margin and set the shared paper color, text color, font, and reading size. These defaults give the farm a consistent foundation.
+*/body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px}/*
+TOUCH FEEDBACK: suppress the browser default tap highlight so the site own button styles remain the visual feedback.
+*/button,a{-webkit-tap-highlight-color:transparent}/*
+BUTTON DEFAULTS: inherit uses the parent setting. Share the page font, show a hand pointer over clickable buttons, and use the page text color.
+*/button{font:inherit;cursor:pointer}/*
+KEYBOARD ACCESS: draw an outline around the button or link being used by keyboard. The offset separates the outline from its border so focus is easy to spot.
+*/button:focus-visible,a:focus-visible{outline:3px solid #bd8f37;outline-offset:4px}/*
+BUTTON DEFAULTS: inherit uses the parent setting. Share the page font, show a hand pointer over clickable buttons, and use the page text color.
+*/button{color:inherit}/*
+UNAVAILABLE BUTTONS: use the normal pointer and a faded appearance when an action, such as selling an empty basket, is unavailable.
+*/button:disabled{cursor:default;opacity:.55}/*
+TOP STRIP: cap its width, center it with automatic margins, and separate it from the page with a thin border. Flexbox (display:flex) arranges children along a row or column; align-items aligns them across that direction, and justify-content spreads or centers them along it.
+*/.site-header{max-width:1320px;margin:auto;height:98px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding:0 12px}/*
+FARM NAME: choose the decorative heading font, adjust letter spacing, and remove the normal underline from the home link.
+*/.brand{font-family:var(--serif);font-weight:600;font-size:30px;text-decoration:none;color:var(--ink);letter-spacing:-1.5px}/*
+FLOWER LOGO: size and color the flower. inline-block lets it sit beside text while retaining its own box; vertical-align nudges its position on that text line.
+*/.brand-icon{display:inline-block;color:#6f8a49;font-size:41px;vertical-align:-3px;margin-right:10px}/*
+LOGO ACCENT: color only the small dot at the end of the farm name.
+*/.brand-dot{color:#b68f43}/*
+NAVIGATION LAYOUT: place the farm and market controls in a row with a gap and position the group in the header.
+*/.site-header nav{display:flex;gap:12px;margin-left:-75px}/*
+NAVIGATION BUTTONS: remove default borders and backgrounds and add spacing and rounded ends, creating quiet tab-like controls.
+*/.nav-button{border:0;background:transparent;padding:11px 20px;font-size:13px;color:#7d8576;border-radius:25px}/*
+CURRENT VIEW: a combined selector with no space requires both classes on the same element. Add a pale background and stronger text to identify the active navigation choice.
+*/.nav-button.active{background:#e7ebdd;color:#38533b;font-weight:700}/*
+MARKET ACCENT: draw a tiny colored circle beside the Farm stand label.
+*/.nav-dot{display:inline-block;background:#bc9a5f;width:5px;height:5px;border-radius:50%;margin-left:5px;vertical-align:2px}/*
+HELP CONTROL: arrange the question mark and words together without a heavy button background.
+*/.help-button{border:0;background:none;font-size:12px;display:flex;gap:8px;align-items:center}/*
+QUESTION MARK BADGE: enclose the small question mark in a circular outline.
+*/.help-button span{border:1px solid #9aa28d;border-radius:50%;width:17px;height:17px;font-size:11px}/*
+MAIN CONTENT WIDTH: center the game and add side padding so content does not touch the window edges.
+*/main{max-width:1260px;margin:auto;padding:0 20px}/*
+INTRODUCTION ROW: space the headline and weather message apart and provide room above the game.
+*/.page-heading{display:flex;align-items:center;justify-content:space-between;padding:43px 0 32px}/*
+SMALL INTRO LABEL: use a small font and wide letter spacing for the short line above the headline.
+*/.eyebrow{font-size:10px;letter-spacing:2.1px;color:#879075;font-weight:700}/*
+MAIN HEADLINE: use the decorative font and a large size to create the page main visual heading.
+*/h1{font-family:var(--serif);font-weight:500;font-size:38px;letter-spacing:-1.3px;margin:10px 0 8px}/*
+INTRO SENTENCE: use smaller muted text under the headline to keep the heading most prominent.
+*/.page-heading p{color:#8b9183;margin:0;font-size:13px}/*
+WEATHER GROUP: line up the sun with its two text lines and add a little breathing room.
+*/.weather{display:flex;gap:14px;align-items:center;margin-right:6px}/*
+SUN PICTURE: make the sun large and warm yellow to suggest a pleasant farm day.
+*/.sun-icon{color:#d8af52;font-size:40px}/*
+WEATHER TEXT LINES: display:block makes these text pieces take their own lines. Exclude the sun icon so it stays beside the text group.
+*/.weather strong,.weather span:not(.sun-icon){display:block}/*
+WEATHER TITLE: set the small weather heading size and its separation from the subtitle.
+*/.weather strong{font-size:12px;margin-bottom:6px;font-weight:500}/*
+WEATHER SUBTITLE: use smaller, lighter text for the secondary weather message.
+*/.weather div span{font-size:10px;color:#969c8c}/*
+FARM AND CARDS: CSS Grid (display:grid) places children in rows and columns. Keep the side column 282 pixels wide and let the farm use the rest. minmax(0,1fr) lets the farm shrink instead of forcing overflow.
+*/.game-layout{display:grid;grid-template-columns:minmax(0,1fr) 282px;gap:24px}/*
+SHRINKABLE FARM: allow the farm column to become narrower than its contents would otherwise request.
+*/.farm-panel{min-width:0}/*
+FARM STATUS STRIP: round only the top corners, match the card background, and align the farm name and coin balance at opposite ends.
+*/.farm-topbar{height:65px;background:#fffef8;border:1px solid var(--line);border-bottom:0;border-radius:15px 15px 0 0;display:flex;align-items:center;justify-content:space-between;padding:0 24px}/*
+FARM NAME GROUP: target the first direct div child and align its status dot, name, and day in a row.
+*/.farm-topbar>div:first-child{display:flex;align-items:center;gap:9px}/*
+STATUS EMPHASIS: use a slightly heavier font for key information in the top strip.
+*/.farm-topbar strong{font-size:13px;font-weight:600}/*
+GREEN STATUS DOT: draw the small circle beside the farm name.
+*/.live-dot{width:7px;height:7px;background:#84a165;border-radius:50%}/*
+DAY SEPARATOR: a left border and padding distinguish the Spring day text from the farm name.
+*/.season{color:#a0a38f;border-left:1px solid #e5e7db;margin-left:7px;padding-left:14px;font-size:10px}/*
+COIN PILL: put the coin symbol, quantity, and label in a softly outlined rounded capsule.
+*/.balance{display:flex;align-items:center;gap:7px;border:1px solid #eee7cf;background:#faf6e7;border-radius:22px;padding:7px 12px}/*
+COIN NUMBER: emphasize the quantity with a larger font and warm brown color.
+*/.balance strong{font-size:16px;color:#76633d}/*
+COIN UNIT LABEL: make the final coins word smaller and quieter than the balance number.
+*/.balance>span:last-child{font-size:10px;color:#9c8c66}/*
+COIN SYMBOL: draw a gold circle around the star. display:inline-grid uses grid centering within a box that can sit beside text; place-items:center centers its contents in both directions.
+*/.coin{display:inline-grid;place-items:center;background:#edc666;color:#ac7e24;border:2px solid #ddb65a;width:20px;height:20px;border-radius:50%;font-size:13px}/*
+SCENE FRAME: position:relative establishes a reference box for positioned children. overflow:hidden clips anything beyond its edges. isolation:isolate creates a separate stacking group so decorative layers stay with this scene.
+*/.landscape{position:relative;aspect-ratio:1.55;overflow:hidden;background:#d4e3a9;isolation:isolate}/*
+BACKGROUND DRAWING: position:absolute places the image against its reference box. inset:0 touches all four edges; object-fit:fill stretches the drawing to cover the scene. pointer-events:none lets clicks pass through to interactive controls.
+*/.farm-art{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;pointer-events:none}/*
+TOP SCENE CAPTION: position the small, widely spaced lettering across the upper part of the illustration.
+*/.scene-label{position:absolute;top:22px;width:100%;text-align:center;font-size:8px;font-weight:700;letter-spacing:2.3px;color:#688052;opacity:.8}/*
+TWELVE PATCHES: arrange four equal columns and three equal rows. Percentage positions keep them aligned with the drawing as the scene resizes. A transform visually changes a box; rotate tilts it, and skewX slants it sideways for the angled garden view.
+*/.plot-grid{position:absolute;left:29.6%;top:33%;width:46%;height:43%;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(3,1fr);gap:6px;transform:rotate(-8deg) skewX(7deg)}/*
+SOIL PATCH: a repeating-linear-gradient draws repeated color bands for soil rows. Add rounded edges, a dark lower shadow, and an inset (inside) shadow. A transition smoothly changes selected properties over time, making hovering gentle.
+*/.plot{position:relative;border:0;border-radius:8px;background:repeating-linear-gradient(0deg,#97704c 0px,#97704c 3px,#a07b53 3px,#a07b53 12px);box-shadow:0 5px 0 #7f5d40,inset 0 0 0 3px #b18b60;transition:filter .15s,translate .15s;display:grid;place-items:center;padding:0;min-height:0}/*
+PATCH HOVER: a brightness filter lightens the soil and translate moves it upward slightly to show it can be clicked.
+*/.plot:hover{filter:brightness(1.1);translate:0 -3px}/*
+WATERED SOIL: use darker color bands and edges so the player can see which patch has had a drink.
+*/.plot.watered{background:repeating-linear-gradient(0deg,#765d45 0px,#765d45 3px,#86674a 3px,#86674a 12px);box-shadow:0 5px 0 #6d513c,inset 0 0 0 3px #987754}/*
+READY TO HARVEST: add a warm inner edge to a fully grown crop patch.
+*/.plot.ready{box-shadow:0 5px 0 #7f5d40,inset 0 0 0 2px #dbc377}/*
+CROP PICTURE: clamp chooses a fluid size with a minimum and maximum. A drop-shadow adds a little depth. Reverse the parent slant and rotation so the emoji remains upright.
+*/.plot .crop{font-size:clamp(24px,3.2vw,45px);filter:drop-shadow(0 3px 1px #4b50222b);transform:skewX(-7deg) rotate(8deg);transition:scale .2s;line-height:1}/*
+RIPE CROP HOVER: scale enlarges the finished crop slightly when the pointer is over its ready patch.
+*/.plot.ready:hover .crop{scale:1.15}/*
+EMPTY PATCH HINT: make the plus sign subtle so an empty patch still looks like soil.
+*/.plot .empty-marker{font-size:19px;color:#c9a77a;opacity:.5}/*
+WATER AND SPARKLE BADGES: pin the small symbol near a patch corner and keep it upright despite the tilted grid.
+*/.plot .plot-badge{position:absolute;right:3px;top:1px;font-size:12px;transform:skewX(-7deg) rotate(8deg)}/*
+GROWTH TRACK: position a small rounded track at the bottom of a growing patch and clip its fill to the track.
+*/.plot .grow-bar{position:absolute;bottom:6px;left:15%;width:70%;height:3px;background:#594c3850;border-radius:2px;overflow:hidden}/*
+GROWTH FILL: color the inner strip; JavaScript changes its width to match the elapsed growing time.
+*/.grow-bar span{display:block;height:100%;background:#c2d58a}/*
+WOODEN SIGN: draw a warm brown label with a dark lower edge, cream lettering, and a slight tilt.
+*/.farm-sign{position:absolute;left:9%;bottom:22%;background:#b98d58;box-shadow:0 3px 0 #8b6a44;border-radius:4px;padding:8px 12px;transform:rotate(-7deg);font-family:var(--serif);color:#fff4cc;font-size:clamp(11px,1.2vw,17px);text-align:center}/*
+SIGN POST: :after draws an extra piece without adding HTML. Empty content creates the decorative box; position it below the sign. z-index controls stacking order, and -1 places this post behind the sign.
+*/.farm-sign:after{content:'';position:absolute;top:100%;height:18px;width:6px;background:#987343;left:50%;z-index:-1}/*
+SIGN SUBTITLE: show the small establishment note on a separate line under the farm name.
+*/.farm-sign span{display:block;font:7px var(--sans);letter-spacing:1px;margin-top:3px}/*
+CHICKEN BUTTON: place the chicken in the meadow and remove ordinary button decoration so it feels part of the illustration.
+*/.chicken{position:absolute;left:21%;bottom:12%;font-size:32px;background:none;border:0;transition:transform .2s}/*
+CHICKEN HOVER: tilt the chicken a little as playful feedback before a click.
+*/.chicken:hover{transform:rotate(-12deg)}/*
+BOTTOM SCENE CAPTION: center the italic encouragement near the lower edge of the illustration.
+*/.scene-caption{position:absolute;bottom:18px;left:0;width:100%;text-align:center;font-family:var(--serif);font-style:italic;font-size:12px;color:#607c4b}/*
+CAPTION SPARKLE: slightly separate and color the small star beside the encouragement.
+*/.scene-caption span{color:#9ba65d;margin-right:5px}/*
+TOOL TRAY: lay out the label, three tools, and hint under the scene. Round the bottom corners to complete the farm panel.
+*/.toolbox{display:flex;align-items:center;justify-content:space-between;padding:15px 23px;background:#fffef8;border:1px solid var(--line);border-radius:0 0 15px 15px;gap:12px;min-height:97px}/*
+TOOL INTRO LABEL: make the small upper label quiet with loose letter spacing and comfortable line spacing.
+*/.tool-label{font-size:8px;line-height:1.7;letter-spacing:1.4px;color:#8d947c}/*
+TOOL INTRO SUBTITLE: switch its second line to the decorative font and a more readable size.
+*/.tool-label strong{font-family:var(--serif);font-size:14px;font-weight:400;letter-spacing:0;color:#516346}/*
+TOOL ROW: keep planting, watering, and harvesting buttons together with even spacing.
+*/.tool-buttons{display:flex;gap:8px}/*
+TOOL BUTTONS: stack each icon and name vertically in a small rounded card. position:relative anchors the shortcut hint placed inside it.
+*/.tool{position:relative;width:81px;border:1px solid #e6e8da;border-radius:10px;background:#f8f8f0;display:flex;flex-direction:column;align-items:center;padding:7px 12px 8px;gap:4px}/*
+SELECTED TOOL: apply a green tint and stronger border so the chosen action is obvious.
+*/.tool.active{background:#eaf0dc;border-color:#9aaf78;box-shadow:0 0 0 1px #9aaf7822}/*
+TOOL ICON SIZE: enlarge only the direct icon span inside each button.
+*/.tool>span{font-size:23px}/*
+TOOL NAMES: keep the action name compact and readable below its icon.
+*/.tool strong{font-size:10px;font-weight:500}/*
+SHORTCUT LABELS: position the keyboard key numbers in the button corner without taking space in the icon-and-text stack.
+*/.tool kbd{position:absolute;top:5px;right:6px;font-size:8px;opacity:.45;font-family:var(--sans)}/*
+TOOL INSTRUCTIONS: reserve a small area for the current action hint and use relaxed line spacing.
+*/.tool-hint{font-size:10px;line-height:1.7;color:#909783;width:124px}/*
+SAVE AND SOUND ROW: place save feedback at one end and the sound switch at the other.
+*/.farm-status{display:flex;justify-content:space-between;margin:15px 3px;font-size:9px;color:#949b89}/*
+QUIET SOUND SWITCH: style the sound control like a small text link while retaining button behavior.
+*/.farm-status button{border:0;background:none;font-size:10px;color:#8d957e;padding:0}/*
+SUPPORTING COLUMN: stack the seed shed, basket, and goal with even gaps.
+*/aside{display:flex;flex-direction:column;gap:16px}/*
+SHARED CARD APPEARANCE: use a thin border, rounded corners, cream background, and inner spacing for the seed shed and basket.
+*/.card{border:1px solid var(--line);border-radius:14px;background:#fffef8;padding:20px}/*
+CARD TITLE ROW: align each card heading and its decorative icon at opposite ends.
+*/.card-heading{display:flex;justify-content:space-between;align-items:center}/*
+CARD TITLES: use the same decorative font as other headings with a modest size.
+*/.card-heading h2{font-family:var(--serif);font-size:20px;font-weight:500;margin:0}/*
+CARD ICONS: size the direct icon beside each card heading.
+*/.card-heading>span{font-size:20px}/*
+CARD DESCRIPTIONS: use muted small text and a lower margin to separate the introduction from the seed choices.
+*/.card>p{font-size:10px;color:#969a8a;margin:6px 0 18px}/*
+SEED CHOICE ROW: align the crop icon, description, and price. Make the whole row clickable; a transparent border reserves room for the selected outline without shifting its size.
+*/.seed-option{display:flex;align-items:center;gap:10px;padding:12px 10px;width:100%;border:1px solid transparent;background:none;text-align:left;border-radius:9px;margin-bottom:6px;position:relative}/*
+SELECTED SEED: highlight the chosen crop row with a pale green background and border.
+*/.seed-option.selected{border-color:#b9c797;background:#f0f3e5}/*
+SEED PICTURES: use a consistent icon width so different crop emojis line up with the same text column.
+*/.seed-icon{font-size:29px;width:36px;text-align:center}/*
+SEED TEXT COLUMN: flex:1 gives the description available space between its icon and price.
+*/.seed-description{flex:1}/*
+SEED NAME: put the crop name on its own line in the choice row.
+*/.seed-description strong{font-size:12px;font-weight:500;display:block}/*
+SEED FACTS: show growth time and selling value on a smaller second line.
+*/.seed-description small{display:block;font-size:9px;color:#929882;margin-top:5px}/*
+SEED COST: use a compact warm color for the amount paid to plant one crop.
+*/.seed-price{font-size:11px;color:#8c7850}/*
+COST COIN ACCENT: color the star symbol beside the seed price gold.
+*/.seed-price span{color:#d1a447}/*
+SEED SHED REMINDER: separate the closing note with a dashed line and center its small text.
+*/.seed-note{text-align:center;border-top:1px dashed #dedfcf;padding-top:16px;margin-top:9px;font-size:9px;color:#9ca389}/*
+BASKET CARD SPACING: slightly reduce the lower padding for this card particular contents.
+*/.basket-card{padding-bottom:15px}/*
+HARVEST COUNTS ROW: spread the three crop counts evenly with a little space above and below.
+*/#basket{margin:16px 0 13px;display:flex;justify-content:space-around;gap:7px}/*
+ONE CROP COUNT: align each crop picture with its quantity.
+*/.basket-item{display:flex;align-items:center;gap:5px;font-size:11px;color:#8c927e}/*
+BASKET COUNT SIZE: size the crop emoji and count spans inside the basket row.
+*/.basket-item span{font-size:22px}/*
+SELL ACTION: make a full-width green button, with its label on the left and payout on the right.
+*/.sell-button{width:100%;padding:12px 14px;border:0;background:#466e46;border-radius:8px;color:#fff9e9;font-size:11px;text-align:left;display:flex;justify-content:space-between;align-items:center;transition:background .2s}/*
+SELL HOVER: darken the sale button only when it is enabled, so unavailable selling does not look clickable.
+*/.sell-button:hover:enabled{background:#365d39}/*
+SALE PAYOUT: give the amount inside the button a slightly smaller, light-colored treatment.
+*/.sell-button span{font-size:10px;color:#e8ebc5}/*
+MARKET REMINDER: center a quiet line under the sale button.
+*/.basket-note{font-size:8px;text-align:center;color:#a0a590;margin-top:12px}/*
+SMALL GOAL PANEL: use a pale green background and position the sparkle beside the goal details.
+*/.goal-card{display:flex;gap:12px;background:#edeee1;border-radius:12px;padding:17px 18px}/*
+GOAL SPARKLE: size and color the decorative symbol beside the harvest goal.
+*/.goal-icon{font-size:25px;color:#9c9d64}/*
+GOAL DETAILS WIDTH: let the text and progress bar fill the remaining room beside the sparkle.
+*/.goal-card>div{flex:1}/*
+GOAL HEADING: style the small supporting title consistently with the other decorative headings.
+*/.goal-card h3{font:500 15px var(--serif);margin:0 0 6px}/*
+GOAL DESCRIPTION: keep the harvest target compact and muted.
+*/.goal-card p{font-size:10px;margin:0;color:#7e886e}/*
+GOAL TRACK: draw a small rounded background for the harvest progress and clip its fill.
+*/.progress-track{height:5px;background:#dce0cc;border-radius:10px;margin:12px 0 7px;overflow:hidden}/*
+GOAL FILL: color the inner bar. JavaScript sets its width, and a short transition smooths the visual change.
+*/#goal-progress{height:100%;background:#95aa71;transition:width .3s}/*
+GOAL COUNT TEXT: make the progress-and-reward summary a small supporting label.
+*/.goal-card #goal-count{font-size:8px;color:#929b80}/*
+CLOSING ROW: separate the footer with a fine top line and spread its two messages across the page.
+*/footer{display:flex;justify-content:space-between;border-top:1px solid var(--line);margin:22px 0 0;padding:21px 0;font-size:10px;color:#969d88}/*
+CLOSING FLOWER: add a soft green decorative flower aligned with the footer text.
+*/.footer-flower{font-size:20px;vertical-align:-2px;margin-left:7px;color:#8c9d71}/*
+TEMPORARY MESSAGE: position:fixed keeps this notice attached to the viewport while scrolling. Center it near the bottom, start it transparent, and give it a high stacking order. pointer-events:none prevents it from blocking farm clicks.
+*/.toast{position:fixed;bottom:30px;left:50%;transform:translate(-50%,20px);padding:13px 22px;background:#34543c;color:#fff8e6;border-radius:12px;box-shadow:0 5px 25px #243c2920;opacity:0;transition:opacity .2s,transform .2s;pointer-events:none;font-size:12px;z-index:10;max-width:90vw;text-align:center}/*
+SHOW A NOTIFICATION: remove the slight downward shift and make the message opaque. The base transition animates its appearance.
+*/.toast.visible{opacity:1;transform:translate(-50%,0)}/*
+CROP FEEDBACK BUBBLE: place the action message above the patches, initially invisible. white-space:nowrap keeps its sentence on one line, and it cannot intercept clicks.
+*/.floating-message{position:absolute;top:22%;left:50%;translate:-50% 0;background:#fffce8;padding:8px 15px;border-radius:15px;font-size:11px;box-shadow:0 3px 10px #485f3020;opacity:0;pointer-events:none;transition:opacity .2s;white-space:nowrap}/*
+SHOW CROP FEEDBACK: JavaScript adds this class to reveal the bubble for a few seconds.
+*/.floating-message.visible{opacity:1}/*
+INSTRUCTION POPUP: give the built-in dialog a cream card appearance, comfortable padding, rounded corners, and a width that fits small screens. calc performs a calculation, here leaving room around the popup.
+*/dialog{border:1px solid #dbe1cf;border-radius:22px;padding:36px;max-width:450px;width:calc(100% - 32px);color:var(--ink);background:#fffdf4;box-shadow:0 20px 80px #20332030}/*
+POPUP BACKGROUND: ::backdrop is the layer behind an open modal dialog. A modal keeps interaction inside its panel. Tint and blur the page behind it so the instructions stand out.
+*/dialog::backdrop{background:#2d463958;backdrop-filter:blur(4px)}/*
+CLOSE CONTROL: place a large, plain x button at the top corner of the help panel.
+*/.dialog-close{position:absolute;right:15px;top:10px;background:none;border:0;font-size:26px}/*
+HELP SPROUT: enlarge the friendly plant icon at the beginning of the instructions.
+*/.dialog-flower{font-size:36px}/*
+HELP HEADING: style the welcome title with the shared decorative font.
+*/dialog h2{font:500 27px var(--serif);margin:13px 0}/*
+HELP PARAGRAPHS: use muted text and generous line spacing for easy reading.
+*/dialog p{font-size:12px;line-height:1.7;color:#8a947d}/*
+NUMBERED INSTRUCTIONS: provide room for list numbers and comfortable spacing between text lines.
+*/dialog ol{padding-left:19px;font-size:12px;line-height:1.8}/*
+INSTRUCTION STEPS: leave space beneath each list item so steps do not run together.
+*/dialog li{padding-bottom:9px}/*
+SAVE AND SHORTCUT NOTE: set this supporting explanation on its own pale green rounded panel.
+*/.help-footnote{background:#eff2e4;padding:12px;border-radius:8px}/*
+MAIN HELP ACTION: give the start button the same green treatment as other important actions and stretch it across the popup.
+*/.primary-button{background:#466e46;color:#fff9e9;border:0;padding:12px 18px;border-radius:8px;width:100%;font-size:12px}/*
+FARM STAND FEEDBACK: run the named highlight animation when navigation draws attention to the basket. ease means the animation changes speed gently instead of moving at one constant rate.
+*/.market-highlight{animation:highlight 1.2s ease}/*
+MARKET ANIMATION: keyframes describe appearance at points in an animation. The midpoint below briefly draws a green ring; the element returns to its normal appearance afterward.
+*/@keyframes highlight{/*
+ANIMATION MIDPOINT: halfway through the market highlight, show a soft ring around the basket card.
+*/50%{box-shadow:0 0 0 5px #d3dca3}}/*
+EXTRA-WIDE SCREENS: a media query applies rules only when its condition matches. min-width means at least this viewport width. Add breathing room when a screen has plenty of space.
+*/@media(min-width:1500px){/*
+SCREEN-SIZE ADJUSTMENT: Add extra top padding to the central page on very wide displays.
+*/main{padding-top:15px}/*
+SCREEN-SIZE ADJUSTMENT: Increase the space above the introduction on very wide displays.
+*/.page-heading{padding-top:50px}}/*
+MEDIUM SCREENS: max-width means this viewport width or narrower. These overrides reduce spacing and controls so the two-column game still fits.
+*/@media(max-width:1000px){/*
+SCREEN-SIZE ADJUSTMENT: Inset the header from the sides as the viewport becomes smaller.
+*/.site-header{margin:0 25px}/*
+SCREEN-SIZE ADJUSTMENT: Narrow the supporting column to 245 pixels and reduce the gap to leave more room for the farm.
+*/.game-layout{grid-template-columns:minmax(0,1fr) 245px;gap:17px}/*
+SCREEN-SIZE ADJUSTMENT: Reduce inner card spacing for a narrower supporting column.
+*/.card{padding:16px}/*
+SCREEN-SIZE ADJUSTMENT: Reduce tool tray padding to make more room for the controls.
+*/.toolbox{padding:12px}/*
+SCREEN-SIZE ADJUSTMENT: Hide the decorative tool introduction while space is limited.
+*/.tool-label{display:none}/*
+SCREEN-SIZE ADJUSTMENT: Reserve a smaller width for the current tool instructions.
+*/.tool-hint{width:105px}/*
+SCREEN-SIZE ADJUSTMENT: Narrow the three tool buttons while keeping their icon and label.
+*/.tool{width:65px}/*
+SCREEN-SIZE ADJUSTMENT: Hide the Spring day label to keep the status strip from becoming crowded.
+*/.season{display:none}/*
+SCREEN-SIZE ADJUSTMENT: Reduce the main headline font size for this viewport width.
+*/.page-heading h1{font-size:32px}/*
+SCREEN-SIZE ADJUSTMENT: Reduce the gaps between crop patches so the garden stays balanced.
+*/.plot-grid{gap:5px}/*
+SCREEN-SIZE ADJUSTMENT: Use a smaller crop picture as the farm becomes narrower.
+*/.plot .crop{font-size:30px}/*
+SCREEN-SIZE ADJUSTMENT: Reduce the wooden sign padding to fit the smaller scene.
+*/.farm-sign{padding:6px 8px}}/*
+PHONE LAYOUT: at this width, stack the farm above the supporting cards. Simplify the header, shrink labels, and adapt controls to the smaller screen.
+*/@media(max-width:740px){/*
+SCREEN-SIZE ADJUSTMENT: Make the header shorter and use narrow side margins with no extra inner padding.
+*/.site-header{height:78px;margin:0 18px;padding:0}/*
+SCREEN-SIZE ADJUSTMENT: Reduce the farm name size so it fits beside the navigation.
+*/.brand{font-size:25px}/*
+SCREEN-SIZE ADJUSTMENT: Reduce the logo flower and its gap from the farm name.
+*/.brand-icon{font-size:32px;margin-right:5px}/*
+SCREEN-SIZE ADJUSTMENT: Remove the desktop offset and gaps from the navigation group.
+*/.site-header nav{margin:0;gap:0}/*
+SCREEN-SIZE ADJUSTMENT: Shrink navigation text and padding so both choices fit on a phone.
+*/.nav-button{font-size:10px;padding:9px 11px}/*
+SCREEN-SIZE ADJUSTMENT: Hide the help button words by reducing their text size to zero; the question mark remains available.
+*/.help-button{font-size:0;gap:0}/*
+SCREEN-SIZE ADJUSTMENT: Restore the question mark font size so Help remains visibly identifiable.
+*/.help-button span{font-size:12px}/*
+SCREEN-SIZE ADJUSTMENT: Reduce vertical space around the introduction on a phone.
+*/.page-heading{padding:29px 0 24px}/*
+SCREEN-SIZE ADJUSTMENT: Use a smaller headline that fits the phone layout.
+*/.page-heading h1{font-size:29px}/*
+SCREEN-SIZE ADJUSTMENT: Reduce the introduction sentence font size slightly.
+*/.page-heading p{font-size:11px}/*
+SCREEN-SIZE ADJUSTMENT: Hide the decorative weather group so the introduction can use the available width.
+*/.weather{display:none}/*
+SCREEN-SIZE ADJUSTMENT: Use smaller side padding around the main page.
+*/main{padding:0 16px}/*
+SCREEN-SIZE ADJUSTMENT: Switch to a single column: put the farm above the supporting cards instead of beside them.
+*/.game-layout{grid-template-columns:1fr;gap:12px}/*
+SCREEN-SIZE ADJUSTMENT: Place the seed and basket cards in two equal columns, with their tops aligned.
+*/aside{display:grid;grid-template-columns:1fr 1fr;align-items:start;gap:12px}/*
+SCREEN-SIZE ADJUSTMENT: Span all supporting-card columns so the harvest goal uses the full width.
+*/.goal-card{grid-column:1/-1}/*
+SCREEN-SIZE ADJUSTMENT: Make the farm status strip shorter and reduce its side padding.
+*/.farm-topbar{height:53px;padding:0 16px}/*
+SCREEN-SIZE ADJUSTMENT: Show the day label again now that the farm status strip spans the phone width.
+*/.season{display:inline;font-size:9px}/*
+SCREEN-SIZE ADJUSTMENT: Scale crop pictures with the viewport width, bounded between 24 and 42 pixels.
+*/.plot .crop{font-size:clamp(24px,6vw,42px)}/*
+SCREEN-SIZE ADJUSTMENT: Show the decorative tool introduction again when the tray has enough room.
+*/.tool-label{display:block}/*
+SCREEN-SIZE ADJUSTMENT: Keep a compact fixed space for the current tool instruction.
+*/.tool-hint{width:104px}/*
+SCREEN-SIZE ADJUSTMENT: Use compact tool buttons sized for the phone tray.
+*/.tool{width:66px}/*
+SCREEN-SIZE ADJUSTMENT: Keep comfortable side padding while reducing the tool tray height.
+*/.toolbox{padding:12px 16px}/*
+SCREEN-SIZE ADJUSTMENT: Make the illustration relatively taller so the farm controls stay usable on a narrow screen.
+*/.landscape{aspect-ratio:1.4}/*
+SCREEN-SIZE ADJUSTMENT: Make the upper scene caption smaller and move it nearer the top edge.
+*/.scene-label{font-size:7px;top:16px}/*
+SCREEN-SIZE ADJUSTMENT: Make the bottom encouragement smaller and closer to the lower scene edge.
+*/.scene-caption{font-size:10px;bottom:13px}/*
+SCREEN-SIZE ADJUSTMENT: Use a readable small font for the wooden sign.
+*/.farm-sign{font-size:12px}/*
+SCREEN-SIZE ADJUSTMENT: Reduce the gap below the save and sound row before the supporting cards.
+*/.farm-status{margin-bottom:4px}/*
+SCREEN-SIZE ADJUSTMENT: Reduce the inner spacing of each supporting card.
+*/.card{padding:15px}/*
+SCREEN-SIZE ADJUSTMENT: Use smaller card titles for the narrow columns.
+*/.card-heading h2{font-size:18px}/*
+SCREEN-SIZE ADJUSTMENT: Reduce the decorative icon beside each card title.
+*/.card-heading>span{font-size:17px}/*
+SCREEN-SIZE ADJUSTMENT: Reduce row padding and the spaces between seed icon, description, and cost.
+*/.seed-option{gap:6px;padding:10px 5px}/*
+SCREEN-SIZE ADJUSTMENT: Use a smaller icon and reserved icon width in seed choices.
+*/.seed-icon{width:27px;font-size:25px}/*
+SCREEN-SIZE ADJUSTMENT: Reduce crop name text to fit the narrower seed shed.
+*/.seed-description strong{font-size:11px}/*
+SCREEN-SIZE ADJUSTMENT: Use smaller growth and selling details beneath each crop name.
+*/.seed-description small{font-size:8px}/*
+SCREEN-SIZE ADJUSTMENT: Use a smaller seed cost label.
+*/.seed-price{font-size:10px}/*
+SCREEN-SIZE ADJUSTMENT: Shrink the closing seed shed reminder.
+*/.seed-note{font-size:8px}/*
+SCREEN-SIZE ADJUSTMENT: Increase line spacing so the small market reminder is readable when it wraps.
+*/.basket-note{line-height:1.6}/*
+SCREEN-SIZE ADJUSTMENT: Stack each crop picture above its count instead of placing them side by side.
+*/.basket-item{flex-direction:column}/*
+SCREEN-SIZE ADJUSTMENT: Use smaller footer text and a gap so the two closing messages fit.
+*/footer{font-size:8px;gap:15px}/*
+SCREEN-SIZE ADJUSTMENT: Reduce the flower beside the closing text.
+*/.footer-flower{font-size:16px}}/*
+NARROW PHONES: reduce small gaps and labels further and hide less essential text so the tools and seed choices still fit.
+*/@media(max-width:390px){/*
+SCREEN-SIZE ADJUSTMENT: Hide the decorative tray label again on the narrowest phones.
+*/.tool-label{display:none}/*
+SCREEN-SIZE ADJUSTMENT: Reduce spacing between the tool group and its instruction.
+*/.toolbox{gap:8px}/*
+SCREEN-SIZE ADJUSTMENT: Reduce the spaces between the three tool buttons.
+*/.tool-buttons{gap:5px}/*
+SCREEN-SIZE ADJUSTMENT: Use smaller tool instructions to fit the remaining tray width.
+*/.tool-hint{font-size:9px}/*
+SCREEN-SIZE ADJUSTMENT: Hide the day label when the status strip is especially narrow.
+*/.season{display:none}/*
+SCREEN-SIZE ADJUSTMENT: Use still smaller supporting-card headings.
+*/.card-heading h2{font-size:16px}/*
+SCREEN-SIZE ADJUSTMENT: Tighten the spaces between the seed choice contents.
+*/.seed-option{gap:3px}/*
+SCREEN-SIZE ADJUSTMENT: Use still smaller seed price text.
+*/.seed-price{font-size:9px}}/*
+REDUCED MOTION: match the device preference for less movement. Disable nonessential transitions and animations and use immediate scrolling. !important gives these declarations priority over normal rules.
+*/@media(prefers-reduced-motion:reduce){/*
+REDUCE MOVEMENT EVERYWHERE: apply the motion preference to all elements and their generated before/after decorations, including hover and popup effects.
+*/*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

@@ -1,3 +1,45 @@
+BEGINNER READING NOTE
+This is a plain-text guide, not executable code (instructions run by a computer),
+so explanatory notes here are ordinary text and do not need comment markers.
+The original setup and play instructions follow this note without changes.
+
+Terms used in the guide:
+A browser is an app such as Chrome or Firefox that opens websites.
+GitHub stores website source files online. A repository is a project folder there.
+GitHub Pages publishes those files as a website. A branch is a named version of
+that project; main is the branch used by this setup. The repository root is its
+top folder, rather than a subfolder. Deployment means publishing the website files.
+HTML (HyperText Markup Language) describes page structure and content.
+CSS (Cascading Style Sheets) defines appearance rules such as colors and spacing.
+JavaScript is the programming language that makes the farm respond to actions.
+SVG (Scalable Vector Graphics) describes a picture using shapes rather than pixels.
+A pixel is a tiny colored dot in a screen image.
+An API (application programming interface) lets one program use another program
+or service; this farm does not need a remote service to play.
+A backend is a program running on a server (another computer providing a service).
+A build tool transforms source files before publishing; this site needs no build.
+localStorage is browser storage that keeps small text values for one website.
+An origin identifies a site by its protocol, host, and port; saves belong to that
+origin. A protocol is the connection scheme such as http, a host names the machine,
+and a port is a numbered service connection point, such as 8000 for local preview.
+A timestamp is a number recording a moment in time; it lets growth resume after
+an absence. Malformed data is saved text that does not match the expected format.
+A dependency is an additional tool or file a project needs. The optional Google
+Fonts download supplies letter styles, and fallback fonts work if it cannot load.
+Python is another programming language; its optional command below starts a local
+web server for preview. localhost names your own computer, not a public website.
+Chromium is a browser used to verify the game. A layout is the arrangement of the
+page elements. Corrupt-save recovery means starting safely when saved data is invalid.
+
+The FILES section below tells you what each website file is for.
+HOW TO PLAY explains the game loop before you need to read any programming.
+TECHNOLOGY identifies the languages and supporting services used.
+SAVED PROGRESS explains what is kept between visits and where it is kept.
+GITHUB PAGES walks through publishing. LOCAL PREVIEW explains how to try it first.
+VERIFIED lists the behavior that was checked in a browser.
+
+END OF BEGINNER READING NOTE
+
 LITTLE ACRE
 A cute point-and-click farming game for GitHub Pages.
 

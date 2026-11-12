@@ -1,47 +1,162 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f6ed">
-  <meta name="description" content="A happy little place to plant, grow, and take things slow. A free cozy farming game.">
-  <title>Little Acre — your happy little farm</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E🌱%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+<!--
+READING THIS FILE
+HTML means HyperText Markup Language: it describes what belongs on a web page.
+A browser is the program, such as Chrome, that opens the page.
+Comments like this are notes for people reading the file; they are not displayed on the page.
+A tag is a marker inside angle brackets. Most opening tags have a matching closing tag
+with a slash; together they enclose an element, which is one part of the page.
+An attribute is extra information written inside an opening tag.
+For example, class groups elements for styling, and id gives one element a unique name.
+CSS means Cascading Style Sheets: the appearance rules in style.css.
+JavaScript is the programming language in script.js that makes the game respond to actions.
+The DOCTYPE declaration below tells the browser to use modern HTML rules.
+--><!DOCTYPE html>
+<!--
+The html element wraps the whole document. lang="en" identifies English,
+which helps reading tools pronounce the text correctly.
+--><html lang="en">
+<!--
+The head stores information about the page and links to supporting files.
+Its contents set up the browser rather than forming the main visible game.
+--><head>
+<!--
+Metadata is information about the page. UTF-8 is a character encoding,
+a way to represent letters and symbols, that supports the farm emojis and curly quotes.
+-->  <meta charset="UTF-8">
+<!--
+The viewport is the visible area of a browser window. This setting uses the
+device width so the mobile layout can fit a phone instead of shrinking a desktop page.
+-->  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+This color can be used by supported browsers for their surrounding controls.
+The # value is a hexadecimal color: six letters or digits describe red, green, and blue.
+-->  <meta name="theme-color" content="#f7f6ed">
+<!--
+This short description helps search engines understand what the website offers.
+-->  <meta name="description" content="A happy little place to plant, grow, and take things slow. A free cozy farming game.">
+<!--
+The title supplies the name shown in the browser tab.
+-->  <title>Little Acre — your happy little farm</title>
+<!--
+A favicon is the tiny picture beside a browser tab title. This one is an SVG,
+a picture described using shapes and text. A data URL stores the picture directly
+in the address rather than loading another file. Percent codes represent special characters.
+-->  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E🌱%3C/text%3E%3C/svg%3E">
+<!--
+This link loads style.css. A relative path, such as style.css, means a file beside
+this HTML file, so the link also works when the farm is hosted inside a GitHub repository.
+-->  <link rel="stylesheet" href="style.css">
+<!--
+This loads the separate JavaScript file. defer tells the browser to wait until
+the HTML has been read before running it, so the game can find its buttons and containers.
+-->  <script src="script.js" defer></script>
 </head>
-<body>
-  <header class="site-header">
+<!--
+The body holds the visible page. A container is an element that groups other elements.
+Throughout this file, div is a general container and span groups a small piece of text.
+An aria attribute supplies extra meaning to assistive technology, such as a screen reader
+that speaks the page aloud. Labels describe controls when an icon alone is unclear.
+A data- attribute stores a small custom label that JavaScript can read.
+--><body>
+<!--
+The header is the top strip with the farm name, navigation, and help.
+An a element is a link; href specifies its destination. ./ points to this same folder.
+-->  <header class="site-header">
     <a class="brand" href="./" aria-label="Little Acre home"><span class="brand-icon">✿</span> little acre<span class="brand-dot">.</span></a>
-    <nav aria-label="Main navigation"><button class="nav-button active" data-view="farm">My farm</button><button class="nav-button" data-view="market">Farm stand <span class="nav-dot"></span></button></nav>
-    <button class="help-button" id="help-open"><span>?</span> How to play</button>
+<!--
+Navigation is a group of controls for moving around the site. The data-view labels
+tell JavaScript which area to highlight and bring into view when a button is clicked.
+-->    <nav aria-label="Main navigation"><button class="nav-button active" data-view="farm">My farm</button><button class="nav-button" data-view="market">Farm stand <span class="nav-dot"></span></button></nav>
+<!--
+This button opens the instructions. JavaScript finds it using the unique help-open id.
+-->    <button class="help-button" id="help-open"><span>?</span> How to play</button>
   </header>
-  <main>
-    <section class="page-heading"><div><div class="eyebrow">A LITTLE DIRT. A LOT OF JOY.</div><h1>Life’s sweeter on the farm.</h1><p>Plant something good. Watch a little happiness grow.</p></div><div class="weather"><span class="sun-icon">☀</span><div><strong>A lovely day</strong><span>Always a good time to grow</span></div></div></section>
-    <div class="game-layout">
-      <section class="farm-panel" aria-label="Your farm">
-        <div class="farm-topbar"><div><span class="live-dot"></span> <strong>Your little acre</strong><span class="season">Spring, day <span id="day">1</span></span></div><div class="balance"><span class="coin">✦</span><strong id="coins">40</strong><span>coins</span></div></div>
-        <div class="landscape" id="landscape">
-          <img class="farm-art" src="farm.svg" alt="A sunny meadow with a little red barn, apple trees, and a duck pond" draggable="false">
+<!--
+main identifies the central content, helping both readers and assistive tools find the game.
+-->  <main>
+<!--
+A section groups related content. This introduction contains the main heading,
+a short description, and a decorative sunny-day message. h1 is the page primary heading.
+-->    <section class="page-heading"><div><div class="eyebrow">A LITTLE DIRT. A LOT OF JOY.</div><h1>Life’s sweeter on the farm.</h1><p>Plant something good. Watch a little happiness grow.</p></div><div class="weather"><span class="sun-icon">☀</span><div><strong>A lovely day</strong><span>Always a good time to grow</span></div></div></section>
+<!--
+This container groups the farm and the side cards so CSS can place them beside
+each other on large screens and stack them on small screens.
+-->    <div class="game-layout">
+<!--
+The farm panel groups the status strip, illustrated growing area, tool controls, and save notice.
+-->      <section class="farm-panel" aria-label="Your farm">
+<!--
+This strip shows the farm name, day, and coins. The day and coins ids mark text
+that JavaScript updates as time passes or the player earns and spends money.
+-->        <div class="farm-topbar"><div><span class="live-dot"></span> <strong>Your little acre</strong><span class="season">Spring, day <span id="day">1</span></span></div><div class="balance"><span class="coin">✦</span><strong id="coins">40</strong><span>coins</span></div></div>
+<!--
+This container provides the frame for the picture and clickable crop patches.
+-->        <div class="landscape" id="landscape">
+<!--
+The image loads the drawing from farm.svg. alt is alternative text describing it
+for someone who cannot see the picture. draggable="false" prevents accidental image dragging.
+-->          <img class="farm-art" src="farm.svg" alt="A sunny meadow with a little red barn, apple trees, and a duck pond" draggable="false">
           <div class="scene-label">GROWN WITH A LITTLE LOVE</div>
-          <div class="plot-grid" id="plots" aria-label="Crop plots"></div>
-          <div class="farm-sign">little acre <span>est. today ♡</span></div>
+<!--
+This empty container is intentional: JavaScript creates twelve crop buttons inside it.
+Keeping the repeated buttons in one place makes it easier to update each crop as it grows.
+-->          <div class="plot-grid" id="plots" aria-label="Crop plots"></div>
+<!--
+These elements decorate the scene with a wooden sign and an encouraging caption.
+The chicken is a real button so mouse, touch, and keyboard users can trigger its greeting.
+-->          <div class="farm-sign">little acre <span>est. today ♡</span></div>
           <button class="chicken" id="chicken" aria-label="Say hello to the chicken">🐓</button>
           <div class="scene-caption"><span>✦</span> A slower pace. A happier place.</div>
-          <div class="floating-message" id="floating-message" aria-live="polite"></div>
+<!--
+This starts empty and receives short messages about actions on a crop patch.
+aria-live="polite" asks a screen reader to announce changes when it is ready.
+-->          <div class="floating-message" id="floating-message" aria-live="polite"></div>
         </div>
-        <div class="toolbox"><div class="tool-label">A LITTLE<br><strong>elbow grease</strong></div><div class="tool-buttons" role="group" aria-label="Farm tools"><button class="tool active" data-tool="plant"><span>🌱</span><strong>Plant</strong><kbd>1</kbd></button><button class="tool" data-tool="water"><span>💧</span><strong>Water</strong><kbd>2</kbd></button><button class="tool" data-tool="harvest"><span>🧺</span><strong>Harvest</strong><kbd>3</kbd></button></div><div class="tool-hint" id="tool-hint">Pick a seed, then click<br>an empty patch.</div></div>
-        <div class="farm-status"><span id="save-status">✓ Your farm is saved automatically</span><button id="sound-toggle" aria-pressed="false">♫ Sound off</button></div>
+<!--
+The toolbox offers planting, watering, and harvesting. Each data-tool value names
+the action that JavaScript should select. The active class marks the starting tool.
+The group role tells assistive tools that these controls belong together.
+A kbd element represents a keyboard key: 1, 2, and 3 are the shortcuts.
+-->        <div class="toolbox"><div class="tool-label">A LITTLE<br><strong>elbow grease</strong></div><div class="tool-buttons" role="group" aria-label="Farm tools"><button class="tool active" data-tool="plant"><span>🌱</span><strong>Plant</strong><kbd>1</kbd></button><button class="tool" data-tool="water"><span>💧</span><strong>Water</strong><kbd>2</kbd></button><button class="tool" data-tool="harvest"><span>🧺</span><strong>Harvest</strong><kbd>3</kbd></button></div><div class="tool-hint" id="tool-hint">Pick a seed, then click<br>an empty patch.</div></div>
+<!--
+The save-status message tells players whether progress is being saved.
+aria-pressed describes an on/off button: false means sound is initially off.
+-->        <div class="farm-status"><span id="save-status">✓ Your farm is saved automatically</span><button id="sound-toggle" aria-pressed="false">♫ Sound off</button></div>
       </section>
-      <aside>
-        <section class="card seed-card" id="seed-card"><div class="card-heading"><h2>The seed shed</h2><span>🌾</span></div><p>Little seeds, big possibilities.</p><div id="seed-list"></div><div class="seed-note">♡ One seed. A little water. That’s all.</div></section>
-        <section class="card basket-card"><div class="card-heading"><h2>Your basket</h2><span>🧺</span></div><div id="basket"></div><button class="sell-button" id="sell-all">Sell harvest <span id="sell-value">+0 ✦</span></button><div class="basket-note">Fresh from your farm to the neighborhood.</div></section>
-        <section class="goal-card"><span class="goal-icon">✧</span><div><h3>A little goal</h3><p id="goal-text">Harvest your first 5 crops</p><div class="progress-track"><div id="goal-progress"></div></div><span id="goal-count">0 / 5 harvested · reward: 20 coins</span></div></section>
+<!--
+aside groups the supporting cards that sit next to the farm on a wide screen.
+-->      <aside>
+<!--
+The seed shed starts with an empty seed-list container. JavaScript fills it with
+one button for each crop, including the price, growing time, and selling value.
+h2 labels a major section below the page main heading.
+-->        <section class="card seed-card" id="seed-card"><div class="card-heading"><h2>The seed shed</h2><span>🌾</span></div><p>Little seeds, big possibilities.</p><div id="seed-list"></div><div class="seed-note">♡ One seed. A little water. That’s all.</div></section>
+<!--
+The basket container receives the harvested crop counts. Selling adds their value
+to the player coins; JavaScript updates the sell-value text and enables the button when useful.
+-->        <section class="card basket-card"><div class="card-heading"><h2>Your basket</h2><span>🧺</span></div><div id="basket"></div><button class="sell-button" id="sell-all">Sell harvest <span id="sell-value">+0 ✦</span></button><div class="basket-note">Fresh from your farm to the neighborhood.</div></section>
+<!--
+This card tracks the first five harvests. The inner goal-progress element becomes
+wider as the player gets closer, and the text changes after the one-time coin reward.
+h3 is a smaller heading used for this supporting goal.
+-->        <section class="goal-card"><span class="goal-icon">✧</span><div><h3>A little goal</h3><p id="goal-text">Harvest your first 5 crops</p><div class="progress-track"><div id="goal-progress"></div></div><span id="goal-count">0 / 5 harvested · reward: 20 coins</span></div></section>
       </aside>
     </div>
-    <footer><span>Made for the joy of growing.</span><span>Take your time. Your little acre will be here. <span class="footer-flower">✿</span></span></footer>
+<!--
+The footer is the small closing area below the game with a friendly reminder.
+-->    <footer><span>Made for the joy of growing.</span><span>Take your time. Your little acre will be here. <span class="footer-flower">✿</span></span></footer>
   </main>
-  <dialog id="help-dialog"><button class="dialog-close" id="help-close" aria-label="Close instructions">×</button><span class="dialog-flower">🌱</span><h2>Welcome to your little acre.</h2><p>No rush. No weeds. Just a little growing.</p><ol><li><strong>Plant.</strong> Pick a seed from the shed, then click an empty patch. Seeds cost coins.</li><li><strong>Water.</strong> Select the water drop and click your planted crops. Each crop needs watering only once.</li><li><strong>Harvest.</strong> When a crop sparkles, use the basket to pick it.</li><li><strong>Sell.</strong> Sell your harvest to buy more seeds!</li></ol><p class="help-footnote">Use keys 1, 2, and 3 to switch tools. Your farm saves on this browser and keeps growing while you’re away.</p><button class="primary-button" id="start-growing">Let’s grow something</button></dialog>
-  <div class="toast" id="toast" role="status"></div>
+<!--
+A dialog is a built-in popup panel. JavaScript opens it when Help is clicked.
+The ordered list, written with ol and li, explains the steps in numbered order.
+strong marks important text. br starts a new line where it appears elsewhere.
+The close and start buttons dismiss these instructions without restarting the farm.
+localStorage, mentioned by the saving behavior in script.js, is browser storage
+that keeps small text values after the page is closed, on this browser and site address.
+-->  <dialog id="help-dialog"><button class="dialog-close" id="help-close" aria-label="Close instructions">×</button><span class="dialog-flower">🌱</span><h2>Welcome to your little acre.</h2><p>No rush. No weeds. Just a little growing.</p><ol><li><strong>Plant.</strong> Pick a seed from the shed, then click an empty patch. Seeds cost coins.</li><li><strong>Water.</strong> Select the water drop and click your planted crops. Each crop needs watering only once.</li><li><strong>Harvest.</strong> When a crop sparkles, use the basket to pick it.</li><li><strong>Sell.</strong> Sell your harvest to buy more seeds!</li></ol><p class="help-footnote">Use keys 1, 2, and 3 to switch tools. Your farm saves on this browser and keeps growing while you’re away.</p><button class="primary-button" id="start-growing">Let’s grow something</button></dialog>
+<!--
+A toast is a small temporary notification. JavaScript fills this empty element
+with messages such as sale confirmations. role="status" lets assistive tools announce it.
+-->  <div class="toast" id="toast" role="status"></div>
 </body>
 </html>
